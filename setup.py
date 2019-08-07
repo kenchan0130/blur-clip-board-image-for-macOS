@@ -8,7 +8,8 @@ with open('requirements.txt') as requirements_file:
 
 setup(
     name="blur-clip-board-image-cli",
-    version="0.0.1",
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],,
     description="Blur clip board image command line tool for macOS",
     author="karakaram",
     install_requires=install_requirements,
