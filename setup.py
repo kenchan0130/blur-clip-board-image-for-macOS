@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from setuptools import setup
 
 with open('requirements.txt') as requirements_file:
@@ -13,5 +16,6 @@ setup(
         "console_scripts": [
             "blur-clip-board-image = app:main"
         ]
-    }
+    },
+    license="MIT"
 )
