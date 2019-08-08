@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="blur-clip-board-image-cli",
-    use_scm_version=True,
-    setup_requires=["setuptools_scm"],
+    url='https://github.com/kenchan0130/blur-clip-board-image-for-macOS',
+    version="0.0.1",
     description="Blur clip board image command line tool for macOS",
     author="Tadayuki Onishi",
     packages=find_packages("."),

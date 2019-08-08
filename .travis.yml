@@ -4,10 +4,8 @@ python: 2.7
 jobs:
   include:
     - stage: deploy
-      if: tag IS present
       provider: pypi
       user: __token__ 
       password: $PYPI_API_TOKEN
       on:
-        all_branches: true
         tags: true
