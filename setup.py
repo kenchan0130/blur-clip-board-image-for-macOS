@@ -9,7 +9,7 @@ with open('README.md', 'r') as f:
 setup(
     name="blur-clip-board-image-cli",
     url='https://github.com/kenchan0130/blur-clip-board-image-for-macOS',
-    version="0.0.1",
+    version="0.0.2",
     description="Blur clip board image command line tool for macOS",
     long_description=long_description,
     author="Tadayuki Onishi",
