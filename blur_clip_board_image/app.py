@@ -25,8 +25,8 @@ def getImageDataFromClipBoard(paste_board):
     image_data = paste_board.dataForType_(NSPasteboardTypeTIFF)
     
     if image_data is None:
-        print >> sys.stderr, "Not found image data in clip borad."
-        sys.exit(1)
+        print("Not found image data in clip borad.")
+        sys.exit(0)
     
     return image_data
 
