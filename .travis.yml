@@ -1,11 +1,13 @@
 language: python
 sudo: false
 python: 2.7
-jobs:
-  include:
-    - stage: deploy
-      provider: pypi
-      user: __token__ 
-      password: $PYPI_API_TOKEN
-      on:
-        tags: true
+install: true
+script:
+    - python setup.py test
+deploy:
+  provider: pypi
+  user: "__token__"
+  password: $PYPI_API_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
