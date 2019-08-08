@@ -1,21 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
-
-with open('requirements.txt') as requirements_file:
-    install_requirements = requirements_file.read().splitlines()
+from setuptools import setup, find_packages
 
 setup(
     name="blur-clip-board-image-cli",
     use_scm_version=True,
-    setup_requires=['setuptools_scm'],,
+    setup_requires=["setuptools_scm"],
     description="Blur clip board image command line tool for macOS",
-    author="karakaram",
-    install_requires=install_requirements,
+    author="Tadayuki Onishi",
+    packages=find_packages("."),
+    install_requires=["pyobjc"],
     entry_points={
         "console_scripts": [
-            "blur-clip-board-image = app:main"
+            "blur-clip-board-image=app:main"
         ]
     },
     license="MIT"
