@@ -12,6 +12,7 @@ setup(
     version="0.0.2",
     description="Blur clip board image command line tool for macOS",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     author="Tadayuki Onishi",
     packages=find_packages(),
     install_requires=[],
