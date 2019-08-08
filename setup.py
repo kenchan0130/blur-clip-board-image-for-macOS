@@ -10,7 +10,7 @@ setup(
     description="Blur clip board image command line tool for macOS",
     author="Tadayuki Onishi",
     packages=find_packages("."),
-    install_requires=["pyobjc"],
+    install_requires=[],
     entry_points={
         "console_scripts": [
             "blur-clip-board-image=app:main"

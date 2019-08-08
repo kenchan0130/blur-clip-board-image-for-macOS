@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import objc
 import sys
 import os
 import argparse
@@ -52,3 +51,7 @@ def main():
     paste_board.setData_forType_(bitmap_image.TIFFRepresentation(), NSPasteboardTypeTIFF)
     
     print("Done.")
+
+
+if __name__ == "__main__":
+    main()
