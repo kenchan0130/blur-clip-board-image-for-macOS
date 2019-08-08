@@ -1,4 +1,4 @@
-# Blure clip board image for macOS
+# Blur clip board image for macOS
 
 [![PyPi version][pypi-image]][pypi-url]
 [![MIT][mit-image]][mit-url]
