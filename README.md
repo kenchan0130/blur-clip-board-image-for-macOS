@@ -41,6 +41,10 @@ curl -sL https://raw.githubusercontent.com/kenchan0130/blur-clip-board-image-for
     - You can also select blur rate with argument like `blur-clip-board-image -r 10`
 3. Paste image
 
+## Demo
+
+![Demo](/imgs/demo.gif)
+
 ## Licence
 
 MIT
