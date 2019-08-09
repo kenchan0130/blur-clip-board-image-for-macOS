@@ -36,10 +36,12 @@ curl -sL https://raw.githubusercontent.com/kenchan0130/blur-clip-board-image-for
 ## Usage
 
 1. Copy image
-2. Run this command `blur-clip-board-image`
+2. Run the `blur-clip-board-image` command
     - Default blur rate is `8.5`
     - You can also select blur rate with argument like `blur-clip-board-image -r 10`
 3. Paste image
+
+When you want to more infomation, please run `blur-clip-board-imag -h`.
 
 ## Demo
 
