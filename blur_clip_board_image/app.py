@@ -14,7 +14,7 @@ def parseArgs():
     default_blur_rate = 8.5
     parser.add_argument("-r", "--rate",
                     help="blur rate, default %s" % default_blur_rate,
-                    default=8.5,
+                    default=default_blur_rate,
                     type=float)
     args = parser.parse_args()
 
@@ -39,14 +39,15 @@ def main():
     image_data = getImageDataFromClipBoard(paste_board)
     
     ci_clipboard_image = CIImage.imageWithData_(image_data)
-    filter = CIFilter.filterWithName_('CIGaussianBlur')
-    filter.setDefaults()
-    filter.setValue_forKey_(ci_clipboard_image, "inputImage")
-    filter.setValue_forKey_(blur_rate, "inputRadius")
+    blur_filter = CIFilter.filterWithName_('CIGaussianBlur')
+    blur_filter.setDefaults()
+    blur_filter.setValue_forKey_(ci_clipboard_image, "inputImage")
+    blur_filter.setValue_forKey_(blur_rate, "inputRadius")
 
     ci_clipboard_image_size = ci_clipboard_image.extent().size
-    output_image = filter.outputImage()
-    bitmap_image = NSBitmapImageRep.alloc().initWithCIImage_(output_image.imageByCroppingToRect_(CGRectMake(0 , 0, ci_clipboard_image_size.width, ci_clipboard_image_size.height)))
+    output_image = blur_filter.outputImage()
+    croped_transparent_image = output_image.imageByCroppingToRect_(CGRectMake(0 , 0, ci_clipboard_image_size.width, ci_clipboard_image_size.height))
+    bitmap_image = NSBitmapImageRep.alloc().initWithCIImage_(croped_transparent_image)
 
     paste_board.clearContents()
     paste_board.setData_forType_(bitmap_image.TIFFRepresentation(), NSPasteboardTypeTIFF)
