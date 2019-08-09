@@ -19,7 +19,7 @@ Blur clip board image command line tool for macOS.
 pip install blur-clip-board-image-cli
 ```
 
-### Directly
+### Without pip
 
 ```sh
 curl -sL https://raw.githubusercontent.com/kenchan0130/blur-clip-board-image-for-macOS/master/install.sh | bash
